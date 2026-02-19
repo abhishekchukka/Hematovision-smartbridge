@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HematoVision - Blood Cell Classification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding-bottom: 40px;
+        }
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-radius: 8px;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .about-section {
+            padding: 30px 40px;
+        }
+        .about-section h2 {
+            color: #e74c3c;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .about-section p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .predict-section {
+            text-align: center;
+            padding: 20px 40px 40px 40px;
+        }
+        .predict-section h2 {
+            color: #e74c3c;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .predict-section p {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        input[type="file"] {
+            font-size: 14px;
+        }
+        .predict-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .predict-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to the HematoVision</h1>
+        </div>
+
+        <div class="about-section">
+            <h2>About Blood Cells</h2>
+            <p>Blood cells are vital components of our body, playing essential roles in immunity, oxygen transport, and clotting. Understanding different types of blood cells is crucial for diagnosing various medical conditions.</p>
+        </div>
+
+        <div class="predict-section">
+            <h2>Predict Blood Cell Type</h2>
+            <p>Upload an image of a blood cell to determine its type using our state-of-the-art classification model.</p>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="form-row">
+                    <input type="file" name="file" accept="image/*" required>
+                    <button type="submit" class="predict-btn">Predict</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
